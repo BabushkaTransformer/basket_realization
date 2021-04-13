@@ -1,0 +1,27 @@
+.catalog-page {
+	display: flex;
+	flex-direction: row;
+
+	@include breakpoint(large) {
+		flex-wrap: wrap;
+	}
+
+	&__filter {
+		width: 25%;
+		padding: 0 12px;
+
+		@include breakpoint(large) {
+			width: 100%;
+			order: 2;
+		}
+	}
+	&__products {
+		width: 75%;
+		padding: 0 12px;
+
+		@include breakpoint(large) {
+			width: 100%;
+			order: 1;
+		}
+	}
+}

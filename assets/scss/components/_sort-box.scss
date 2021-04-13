@@ -1,0 +1,51 @@
+.sort-box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	font-size: 13px;
+	padding: 15px 30px;
+	border: 1px solid $color-white-3;
+
+	@include breakpoint(medium) {
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	&__item {
+		@include breakpoint(medium) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+
+			&:nth-child(2) {
+				margin: 20px 0;
+			}
+		}
+	}
+	&__tabs {
+		display: flex;
+
+		&--blocks,
+		&--list {
+			border: none;
+			background: none;
+			font-size: 18px;
+			color: $color-white-3;
+			cursor: pointer;
+
+			&.active {
+				color: $color-black-1;
+			}
+		}
+	}
+
+	// sort-box option
+	&__option {
+		padding: 5px 30px 5px 15px;
+		border-radius: 3px;
+		margin-left: 5px;
+	}
+}

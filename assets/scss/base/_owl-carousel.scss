@@ -1,0 +1,110 @@
+// banner-slider:::::::::::::::::::::::::::::::::::::
+.banner-carousel {
+	// carousel active scale
+	&:hover {
+		.owl-prev {
+			left: 50px;
+			opacity: 1;
+
+			@include breakpoint(large) {
+				left: 20px;
+			}
+		}
+		.owl-next {
+			right: 50px;
+			opacity: 1;
+
+			@include breakpoint(large) {
+				right: 20px;
+			}
+		}
+	}
+
+	.owl {
+		// arrows
+		&-nav {
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&-prev,
+		&-next {
+			position: absolute;
+			opacity: 0;
+			transition: all 0.2s ease-out;
+
+			span {
+				width: 30px;
+				height: 30px;
+			}
+		}
+		&-prev {
+			left: 80px;
+		}
+		&-next {
+			right: 80px;
+		}
+
+		// dots
+		&-dots {
+			position: absolute;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			bottom: 10px;
+			.active {
+				background: $color-green !important;
+				transition: all 0.3s ease;
+			}
+		}
+		&-dot {
+			width: 15px;
+			height: 15px;
+			margin-left: 10px;
+			background: $color-white !important;
+			border-radius: 50%;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+// product slider:::::::::::::::::::::::::::;;;;
+.slider {
+	// carousel active scale
+	&:hover {
+		.owl-prev {
+			left: 0;
+			opacity: 1;
+		}
+		.owl-next {
+			right: 0;
+			opacity: 1;
+		}
+	}
+	.owl-item {
+		height: auto;
+		transform: scale(0.75);
+		transition: all 0.5s ease-out;
+	}
+	.owl-item.active {
+		transform: scale(1);
+	}
+	.owl-prev,
+	.owl-next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: all 0.3s ease-out;
+		opacity: 0;
+	}
+	.owl-prev {
+		left: 20px;
+	}
+	.owl-next {
+		right: 20px;
+	}
+}

@@ -1,0 +1,19 @@
+
+/*:::::::::: Margin Top :::::::::: */
+.m-t-30 { margin-top: 30px ; }
+.m-t-40 { margin-top: 40px ; }
+.m-t-60 { margin-top: 60px ; }
+.m-t-100 { margin-top: 100px ; }
+.m-t-120 { margin-top: 120px ; }
+
+/*:::::::::: Margin Bottom :::::::::: */
+.m-b-30 { margin-bottom: 30px ; }
+
+@include breakpoint (medium) {
+	.m-t-40 { margin-top: 30px ; }
+	.m-t-100 { margin-top: 80px ; }
+}
+@include breakpoint (small) {
+	.m-t-40 { margin-top: 20px ; }
+	.m-t-100 { margin-top: 40px ; }
+}

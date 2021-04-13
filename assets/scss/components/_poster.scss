@@ -1,0 +1,64 @@
+.poster {
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 30px;
+
+		@include breakpoint(small) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__item {
+		position: relative;
+		width: 50%;
+		height: 280px;
+		margin: 0 12px;
+		padding: 0 60px;
+
+		@include breakpoint(medium) {
+			padding: 0 30px;
+			height: 220px;
+			margin-top: 30px;
+		}
+		@include breakpoint(small) {
+			width: 100%;
+			padding: 0 30px;
+			height: 180px;
+			margin-top: 30px;
+		}
+	}
+	&__content {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	&__description {
+		font-size: 16px;
+		color: $color-primary;
+		letter-spacing: 4px;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	&__title {
+		font-size: 40px;
+		font-weight: 500;
+		line-height: 40px;
+		letter-spacing: 4px;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 8px;
+
+		@include breakpoint(medium) {
+			font-size: 19px;
+			line-height: 19px;
+		}
+		@include breakpoint(small) {
+			font-size: 19px;
+			line-height: 19px;
+		}
+	}
+	&__btn {
+		text-align: center;
+	}
+}

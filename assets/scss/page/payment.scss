@@ -1,0 +1,219 @@
+@import "../base/colors";
+@import "../base/breakPoints";
+@import "../base/reset-styles";
+@import "../base/global-classes";
+@import "../base/button";
+@import "../base/utilities";
+
+//::::::::::::::::Component::::::::::::::::::
+@import "../components/header";
+@import "../components/offcanvas";
+@import "../components/cards";
+@import "../components/product";
+@import "../components/footer";
+
+// payment ============================================
+// payment ============================================
+.payment {
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+
+		@include breakpoint(medium) {
+			flex-wrap: wrap;
+			flex: 0 0 100%;
+		}
+	}
+	// payment left=====================================
+	&__left {
+		width: 60%;
+		padding: 20px 66px 0 0;
+
+		@include breakpoint(medium) {
+			width: 100%;
+			padding: 20px;
+		}
+		@include breakpoint(small) {
+			width: 100%;
+			padding: 20px 0;
+		}
+	}
+	// payment right=====================================
+	&__right {
+		width: 40%;
+		margin: 20px 0;
+		border: 1px solid #ccc;
+		border-radius: 10px;
+		background-color: #fafafa;
+
+		@include breakpoint(medium) {
+			width: 100%;
+		}
+	}
+}
+
+// payment-sidebar=========================================
+// payment-sidebar=========================================
+.payment-sidebar {
+	&__container {
+		padding: 40px 20px;
+	}
+
+	&__items {
+		color: $color-secondary;
+	}
+	&__item {
+		display: table-row;
+		vertical-align: inherit;
+		border-color: inherit;
+	}
+	&__img {
+		position: relative;
+		width: 15%;
+		height: 70px;
+		img {
+			border-radius: 8px;
+		}
+	}
+	&__name {
+		text-align: left;
+		width: 60%;
+		padding-left: 15px;
+	}
+	&__price {
+		width: 25%;
+		text-align: right;
+
+		span {
+			font-size: 16px;
+		}
+	}
+
+	&__quantity {
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 20px;
+		white-space: nowrap;
+		text-align: center;
+		border-radius: 1.75em;
+		background-color: rgba(114, 114, 114, 0.9);
+		color: #fff;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		min-width: 20px;
+		height: 20px;
+		padding: 0 0.5833333333em;
+		position: absolute;
+		right: -5px;
+		top: 0;
+		z-index: 3;
+	}
+
+	// cost=======================================
+
+	&__cost {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 20px;
+		padding-top: 15px;
+		color: $color-secondary;
+		border-top: 1px solid #ccc;
+
+		&--total {
+			font-size: 25px !important;
+		}
+		p {
+			font-size: 18px;
+			padding-left: 5px;
+		}
+	}
+}
+
+// form
+.form {
+	&__content {
+		display: flex;
+		flex-direction: column;
+		padding-top: 40px;
+
+		&:first-child {
+			padding-top: 0;
+		}
+
+		label {
+			margin-bottom: 20px;
+			color: #333333;
+			font-size: 18px;
+		}
+		input {
+			padding: 10px 8px;
+			margin: 6px;
+			background-color: white;
+			color: #333333;
+			border-color: #d9d9d9;
+			border-radius: 5px;
+		}
+	}
+
+	&__checkbox {
+		margin-top: 5px;
+
+		label {
+			font-size: 14px;
+			cursor: pointer;
+		}
+		input {
+			cursor: pointer;
+		}
+	}
+
+	// address======================================
+	&__double {
+		display: flex;
+		justify-content: space-between;
+
+		input {
+			width: 50%;
+			margin: 6px;
+		}
+
+		@include breakpoint(medium) {
+			flex-wrap: wrap;
+
+			input {
+				width: 100%;
+			}
+		}
+	}
+
+	// bottom==================================
+	&__bottom {
+		margin-top: 20px;
+
+		@include breakpoint(small) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		a {
+			color: $color-green;
+			margin-left: 20px;
+			transition: 0.3s all;
+
+			@include breakpoint(small) {
+				margin: 10px 0 0;
+			}
+
+			&:hover {
+				color: $color-primary;
+			}
+		}
+	}
+	&__button {
+		border: none;
+		border-radius: 8px;
+		margin: 6px;
+	}
+}

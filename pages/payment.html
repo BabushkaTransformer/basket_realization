@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="../assets/css/page/payment.css" />
+	</head>
+	<body>
+		<div class="payment">
+			<div class="payment__container container">
+				<!-- payment left -->
+				<div class="payment__left">
+					<!-- form -->
+					<form action="" class="payment__form form">
+						<!-- content -->
+						<div class="form__content">
+							<label for="contact-information">Contact information</label>
+							<input type="email" id="contact-information" placeholder="Email or mobile phone number" required />
+							<div class="form__checkbox">
+								<input type="checkbox" id="keepDate" /><label for="keepDate"
+									>Keep me up to date on news and exclusive offers</label
+								>
+							</div>
+						</div>
+						<!-- content -->
+						<div class="form__content">
+							<label>Shipping address</label>
+							<div class="form__double">
+								<input type="text" placeholder="Address" required />
+								<input type="text" placeholder="City" required />
+							</div>
+							<input type="text" placeholder="Apartment" />
+						</div>
+						<!-- content -->
+						<div class="form__content">
+							<label>Full name</label>
+							<div class="form__double">
+								<input type="text" placeholder="Name" required />
+								<input type="text" placeholder="Last name" required />
+							</div>
+							<div class="form__checkbox">
+								<input type="checkbox" id="saveInfo" /><label for="saveInfo">Save this information for next time</label>
+							</div>
+						</div>
+						<!-- buttons -->
+						<div class="form__bottom">
+							<button class="form__button black-button" type="submit">Accept</button>
+							<a href="cart.html">Return to Cart</a>
+						</div>
+					</form>
+				</div>
+
+				<!-- payment right -->
+				<div class="payment__right payment-sidebar">
+					<div class="payment-sidebar__container">
+						<!-- table -->
+						<table>
+							<tbody class="payment-sidebar__items">
+								<!-- items -->
+							</tbody>
+						</table>
+						<!-- cost -->
+						<div class="payment-sidebar__cost">
+							<p>Total:</p>
+							<span class="payment-sidebar__cost--total">14</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script src="../assets/js/payment.js"></script>
+	</body>
+</html>

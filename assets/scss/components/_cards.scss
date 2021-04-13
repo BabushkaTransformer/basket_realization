@@ -1,0 +1,262 @@
+// card:::::::::::::::::::::::::::::;
+.card {
+	border: 1px solid $color-white-2;
+
+	// hover===============================
+	&:hover {
+		.card__action {
+			opacity: 1;
+			bottom: 10px;
+		}
+	}
+	// card top===============================
+	&__top {
+		position: relative;
+	}
+	&__img {
+		max-width: 100%;
+		height: 260px;
+		object-fit: contain;
+
+		margin: 0 0 20px 0;
+	}
+	// sale label===============================
+	&__label {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		padding: 0 14px;
+		font-size: 14px;
+		color: #fff;
+		border-radius: 30px;
+		font-weight: 300;
+		z-index: 10;
+
+		// sale colors===============================
+		&--green {
+			background: $color-primary;
+		}
+		&--black {
+			background: $color-black-1;
+		}
+		&--red {
+			background: $color-red;
+		}
+	}
+	// action hover===============================
+	&__action {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		text-align: center;
+		opacity: 0;
+
+		transition: all 0.3s ease-out;
+
+		&--list {
+			display: inline-block;
+			width: auto;
+			position: relative;
+			opacity: 1;
+			margin: 5px 0 0 30px;
+		}
+		li {
+			position: relative;
+			display: inline-block;
+			margin-right: 6px;
+
+			a {
+				line-height: 42px;
+				width: 40px;
+				text-align: center;
+				font-size: 18px;
+				display: inline-block;
+
+				background: $color-primary;
+				border-radius: 50%;
+				height: 40px;
+				color: $color-white;
+			}
+			img {
+				margin: 10px 10px;
+				width: 20px !important;
+				height: 20px;
+			}
+		}
+	}
+
+	// card bottom===============================
+	&__bottom {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		padding: 20px 0;
+	}
+	&__description {
+		font-size: 14px;
+		line-height: 18px;
+		color: $color-black;
+
+		margin: 0 0 10px 0;
+		transition: all 0.3s ease;
+
+		&:hover {
+			color: $color-primary;
+		}
+	}
+	&__price {
+		display: flex;
+		align-items: center;
+
+		&--current {
+			font-size: 16px;
+			font-weight: 600;
+			color: #89c74a;
+		}
+
+		&--old {
+			padding-left: 5px;
+			color: $color-gray;
+		}
+	}
+	&__text {
+		display: none;
+		margin: 15px 0;
+		font-size: 14px;
+	}
+	&__list-action {
+		display: none;
+		position: relative;
+		margin-top: 30px;
+
+		@include breakpoint(medium) {
+			margin-top: 10px;
+		}
+	}
+
+	// card--list::::::::::::::::::::::::::::::::::::::::::::;
+	// card--list::::::::::::::::::::::::::::::::::::::::::::;
+	&--list {
+		position: relative;
+		display: flex;
+		border: 1px solid $color-white-2;
+		margin-top: 20px;
+
+		@include breakpoint(medium) {
+			flex-direction: column;
+		}
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		.card__top {
+			position: static;
+			width: 33.333%;
+
+			@include breakpoint(medium) {
+				width: 100%;
+			}
+		}
+		.card__img {
+			width: 100%;
+			height: auto;
+			margin: 0;
+
+			@include breakpoint(medium) {
+				width: 100%;
+			}
+		}
+		// card bottom
+		.card__bottom {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			width: 66.66666%;
+			padding: 25px;
+
+			@include breakpoint(medium) {
+				width: 100%;
+				padding: 15px;
+			}
+		}
+		.card__description {
+			font-size: 20px;
+			line-height: 18px;
+			color: $color-black;
+
+			margin: 0 0 10px 0;
+			transition: all 0.3s ease;
+
+			&:hover {
+				color: $color-primary;
+			}
+		}
+		.card__price {
+			display: flex;
+			align-items: center;
+
+			&--current {
+				font-size: 16px;
+				font-weight: 600;
+				color: #89c74a;
+			}
+
+			&--old {
+				padding-left: 5px;
+				color: $color-gray;
+			}
+		}
+		.card__text {
+			display: inline-block;
+		}
+		.card__list-action {
+			display: flex;
+			align-items: center;
+		}
+	}
+}
+// news-card:::::::::::::::::::::::::::::::::::::::
+.news-card {
+	&__img {
+		width: 100%;
+		max-height: 230px;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	// news card desc
+	&__desc {
+		margin: 30px 0 0;
+	}
+
+	&__title {
+		font-size: 18px;
+		line-height: 20px;
+		color: $color-secondary;
+		text-transform: capitalize;
+		display: block;
+		margin-bottom: 5px;
+		text-decoration: none !important;
+		transition: all 0.3s ease;
+	}
+	&__subtitle {
+		font-size: 13px;
+
+		&--link {
+			color: $color-primary;
+		}
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 18px;
+		color: $color-black;
+
+		margin: 20px 0 15px 0;
+		transition: all 0.3s ease;
+	}
+}

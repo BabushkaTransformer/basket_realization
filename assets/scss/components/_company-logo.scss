@@ -1,0 +1,12 @@
+.company-logo {
+	&__slide {
+		img {
+			opacity: 0.5;
+			transition: all 0.3s ease;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}

@@ -1,0 +1,82 @@
+.ibg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	> img {
+		display: none !important;
+	}
+}
+
+// container:::::::::::::::
+
+.wrapper {
+	overflow: hidden;
+}
+
+.overlay {
+	display: none;
+	position: fixed;
+	z-index: 9998;
+	overflow-y: auto;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+	transition: all 0.3s ease;
+}
+
+.counter {
+	position: absolute;
+	display: block;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	font-size: 12px;
+	background: $color-primary;
+	color: #fff;
+	border-radius: 50%;
+	bottom: -2.5px;
+	left: 15px;
+}
+
+.label-top {
+	position: absolute;
+	top: 0;
+	left: 0px;
+	text-align: center;
+	display: block;
+	color: #fff;
+	width: 45px;
+	height: 17px;
+	padding: 1.5px 10px;
+	border-radius: 30px;
+	font-size: 10px;
+	line-height: 15px;
+
+	&:after {
+		position: absolute;
+		content: "";
+		width: 5px;
+		height: 5px;
+		transform: rotate(45deg);
+		bottom: -2.5px;
+		left: 12px;
+		background-color: inherit;
+	}
+	&--red {
+		background-color: $color-red;
+	}
+	&--blue {
+		background-color: $color-light-blue;
+	}
+	&--green {
+		background-color: $color-green;
+	}
+}
