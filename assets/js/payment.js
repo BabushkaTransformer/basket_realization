@@ -6,7 +6,7 @@ const paymentProducts = (img, title, price, quantity) => {
     <tr class="payment-sidebar__item">
         <td class="payment-sidebar__img">
             <span class="payment-sidebar__quantity">${quantity}</span>
-            <img src="${img}" alt="" />
+            <img src="../${img}" alt="" />
         </td>
         <td class="payment-sidebar__name">${title}</td>
         <td class="payment-sidebar__price"><span>${price * quantity} сом</span></td>

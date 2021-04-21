@@ -92,5 +92,9 @@ const addBlockActive = () => {
 	listTab.removeAttribute("disabled");
 };
 
-blockTab.addEventListener("click", addBlockActive);
-listTab.addEventListener("click", addListActive);
+if (blockTab) {
+	blockTab.addEventListener("click", addBlockActive);
+}
+if (listTab) {
+	listTab.addEventListener("click", addListActive);
+}

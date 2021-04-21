@@ -7,7 +7,7 @@ const products = (img, title, price, quantity, id) => {
 	return `
     <tr data-id="${id}">
         <td class="cart-table__img">
-            <img src="${img}" alt="" />
+            <img src="../${img}" alt="" />
         </td>
         <td class="cart-table__name">${title}</td>
         <td class="cart-table__price"><span>${price}</span><span> сом</span></td>

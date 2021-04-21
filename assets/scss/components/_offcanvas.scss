@@ -36,9 +36,15 @@
 	&--cart {
 		right: 0;
 		padding: 30px 10px 30px 30px;
-		max-width: 400px;
-		min-width: 300px;
+		width: 100%;
+		width: 400px;
+
 		transform: translateX(100%);
+
+		@include breakpoint(small) {
+			width: 100%;
+			min-width: 300px;
+		}
 		&::-webkit-scrollbar {
 			width: 0px;
 			background: transparent;

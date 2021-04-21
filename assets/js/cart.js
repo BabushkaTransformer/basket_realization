@@ -49,6 +49,7 @@ const printFullPrice = () => {
 	subtotalPrice.textContent = `${normalPrice(TotalPrice)} сом`;
 };
 printFullPrice();
+
 // удаление из корзины==============================================================
 const deleteProduct = (productParent) => {
 	let currentPrice = parseInt(priceWithoutSpaces(productParent.querySelector(".added-item__price").textContent));
@@ -61,24 +62,47 @@ const deleteProduct = (productParent) => {
 };
 
 // создаем карту в корзине==============================================================
-const generateCartProduct = (img, title, price, quantity, id) => {
-	return `
-        <li class="offcanvas__cart-item added-item__list" data-id="${id}">
-            <div class="added-item__content">
-                <a href="" class="added-item__img"><img src="${img}" alt="" /></a>
-                <div class="added-item__detail">
-                    <a href="" class="added-item__link">${title}</a>
-                    <span class="added-item__price">${price} сом</span>
-                    <span class="added-item__info">Dimension: 40x60cm</span>
-					<div class="added-item__info"><span>Qty: </span><span class="added-item__quantity">${quantity}</span></div>
-                </div>
-            </div>
-            <button class="added-item__dismiss">
-                <i class="fa fa-times added-item__delete"></i>
-            </button>
-        </li>
-    `;
-};
+let generateCartProduct;
+
+if (document.querySelector("title").text == "Gsone") {
+	generateCartProduct = (img, title, price, quantity, id) => {
+		return `
+			<li class="offcanvas__cart-item added-item__list" data-id="${id}">
+				<div class="added-item__content">
+					<a href="" class="added-item__img"><img src="${img}" alt="" /></a>
+					<div class="added-item__detail">
+						<a href="" class="added-item__link">${title}</a>
+						<span class="added-item__price">${price} сом</span>
+						<span class="added-item__info">Dimension: 40x60cm</span>
+						<div class="added-item__info"><span>Qty: </span><span class="added-item__quantity">${quantity}</span></div>
+					</div>
+				</div>
+				<button class="added-item__dismiss">
+					<i class="fa fa-times added-item__delete"></i>
+				</button>
+			</li>
+		`;
+	};
+} else {
+	generateCartProduct = (img, title, price, quantity, id) => {
+		return `
+			<li class="offcanvas__cart-item added-item__list" data-id="${id}">
+				<div class="added-item__content">
+					<a href="" class="added-item__img"><img src="../${img}" alt="" /></a>
+					<div class="added-item__detail">
+						<a href="" class="added-item__link">${title}</a>
+						<span class="added-item__price">${price} сом</span>
+						<span class="added-item__info">Dimension: 40x60cm</span>
+						<div class="added-item__info"><span>Qty: </span><span class="added-item__quantity">${quantity}</span></div>
+					</div>
+				</div>
+				<button class="added-item__dismiss">
+					<i class="fa fa-times added-item__delete"></i>
+				</button>
+			</li>
+		`;
+	};
+}
 
 // кнопка добавление в корзину==============================================================
 cartBtn.forEach((el) => {
@@ -112,7 +136,7 @@ cartBtn.forEach((el) => {
 
 // при открытии корзины==============================================================
 const openCard = () => {
-	var local_data = getCardData(), // вытаскиваем все данные корзины
+	var local_data = getCardData(),
 		totalItems = "";
 	// если что-то в корзине уже есть, начинаем формировать данные для вывода
 	if (local_data == 0) {
