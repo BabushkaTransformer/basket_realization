@@ -963,6 +963,7 @@ select {
   width: 100%;
   color: #fff;
   border: none;
+  text-align: center;
 }
 
 .added-item {
